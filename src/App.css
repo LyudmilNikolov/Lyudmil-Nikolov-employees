@@ -1,0 +1,173 @@
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App {
+  background-color: #ffff;  
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  background: linear-gradient(45deg, #3f87a6, #ebf8e1, #f69d3c);
+  
+  color: #090808;
+
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+
+  height: 100vh;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.file-upload-container {
+  margin-bottom: 30px;
+  text-align: center;
+  font-family: inherit;
+  position: relative;
+  padding: 10px;
+}
+
+.file-upload-container input[type="file"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+}
+
+label {
+  display: inline-block;
+  position: relative;
+  padding: 10px 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 200px;
+  overflow: hidden;
+  cursor: pointer;
+  background: linear-gradient(45deg, #3f87a6, #ebf8e1, #f69d3c);
+}
+
+label span {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  font-size: 20px;
+  letter-spacing: 8px;
+}
+
+label .liquid {
+  position: absolute;
+  top: -80px;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  background-color: linear-gradient(60deg, #3f87a6, #ebf8e1, #f69d3c);
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+  transition: 0.5s;
+}
+
+label .liquid::after {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -75%);
+}
+
+label .liquid::before {
+  border-radius: 45%;
+  background-color: rgba(20, 20, 20, 1);
+  animation: wave 5s linear infinite;
+}
+
+label .liquid::after {
+  border-radius: 40%;
+  background-color: rgba(20, 20, 20, 0.5);
+  animation: wave 5s linear infinite;
+}
+
+@keyframes wave {
+  0% {
+    transform: translate(-50%, -75%) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -75%) rotate(360deg);
+  }
+}
+
+
+
+.file-info-container {
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.app-container {
+  background-color: #ffff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  min-width: 500px;
+}
+
+.table-container{
+  max-width: 100%;
+  overflow-x: auto;
+  width: 100%;
+  min-width: 800px;
+}
